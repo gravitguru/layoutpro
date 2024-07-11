@@ -1,0 +1,436 @@
+/* 
+1.general
+2.flex alignment 
+3.leftside nav bar 
+4.rightside container
+5.header_menu
+6.cards
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --blue: #232BFF;
+  --liteblue: #f1f4f6;
+  --gray-dark: #343a40;
+  --brakpoint-xs: 0;
+  --brakpoint-sm: 576px;
+  --brakpoint-md: 768px;
+  --brakpoint-lg: 992px;
+  --brakpoint-xl: 1200px;
+  --font-family-poppins: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-poppins);
+  font-size: 13px;
+}
+body {
+  margin: 0 auto;
+  padding: 2px;
+  min-width: var(--brakpoint-sm);
+}
+.btn{
+  padding: 6px 10px;
+  border-radius: 2px;
+  background-color: var(--blue);
+  color: white;
+}
+.btn:hover{
+  opacity: 80%
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.dashboard_layout{
+  display: flex;
+  gap: 10px;
+}
+
+/* 2.flex alignment */
+.xs{
+  display: flex;
+  justify-content: flex-start;
+}
+.xc{
+  display: flex;
+  justify-content: center;
+}
+.xe{
+  display: flex;
+  justify-content: flex-end;
+}
+.ys{
+  display: flex;
+ align-items: flex-start;
+}
+.yc{
+  display: flex;
+  align-items: center;
+}
+.ye{
+  display: flex;
+  align-items: flex-end;
+}
+.xys{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.xyc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.xye{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+
+
+/* 2.leftside nav bar */
+.sidenav{
+  width: 230px;
+  padding: 5px 8px;
+  height: 100vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.sidenavmobile{
+  width: 40px;
+  padding: 5px 8px;
+  height: 100vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.logo{
+  position: relative;
+  width: 100%;
+  
+}
+.logo > img {
+  padding: 0 10px;
+  margin: 10px 0px;
+}
+.logo > .doggle{
+  position: absolute;
+  inset: 0;
+  padding-left: 205px;
+}
+.logo > .doggle_mob{
+  position: absolute;
+  inset: 0;
+  padding-left: 55px;
+}
+.logo > .doggle > i {
+  font-size: 20px;
+  color: var(--blue);
+  cursor: pointer;
+}
+.main_menu_list{
+display: flex;
+flex-direction: column;
+gap: 5px;
+text-transform: capitalize;
+color : var(--gray-dark)
+}
+.main_menu_list > h6{
+  font-size: 12px;
+  padding: 3px;
+} 
+.main_menu_list > a {
+  color : var(--gray-dark);
+
+  border-radius: 6px;
+  padding: 7px 4px;
+  margin-left: 6px;
+
+}
+.main_menu_list > a:hover {
+  color : white;
+  background-color: var(--blue);
+}
+.main_menu_list > .active {
+  color : white;
+  background-color: var(--blue);
+}
+.main_menu_list > a > i {
+  padding-right: 4px;
+  font-size: 17px;
+}
+.req_menu{
+  margin-top: 20px;
+}
+.acc_menu{
+  align-self: flex-end;
+  margin-top: 40px;
+  padding: 8px 2px ;
+  border-radius: 0.6rem;
+  background-color: var(--liteblue);
+}
+/* 4.rightside container */
+.dashboard_layout{
+ width: 95vw;
+}
+.rightside_container{
+width : 100%
+}
+/* 5.header_menu */
+.header_menu{
+  margin-top: 5px;
+width: 100%;
+height: 50px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+border-radius: 0.6rem;
+padding: 5px 10px;
+justify-content: space-between;
+}
+.header_menu > h1 {
+  font-size: 1.3rem;
+}
+.header_menu > .search {
+  padding: 6px 4px ;
+  width: 580px;
+  background-color: var(--liteblue);
+  border-radius: 0.4rem;
+}
+.header_menu > .search > i {
+  font-size: 20px;
+  padding: 3px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+.header_menu > .search > input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 3px;
+}
+.notification{
+gap:10px
+}
+.notification > i{
+  font-size: 20px;
+  padding: 3px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+.notification > i:hover{
+color: var(--blue);
+}
+.avatorimg{
+padding: 3px;
+gap: 6px;
+}
+.avatorimg  > img{
+width: 36px;
+}
+.avatorimg > i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.dropmenu{
+  position: absolute;
+  
+inset:0;
+height :fit-content;
+margin-right: 20px;
+margin-top: 70px;
+
+}
+.dropmenu>ul{
+  background:white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding:5px;
+display: flex;
+gap: 5px;
+flex-direction: column;
+width: 200px;
+  
+}
+.dropmenu>ul>li{
+  cursor: pointer;
+  width: 100%;
+  color: #343a40;
+  padding: 4px 5px;
+  background:#f1f4f6;
+  border-radius: 4px;
+  
+}
+.dropmenu>ul>li>a{
+  cursor: pointer;
+  width: 100%;
+  color: #343a40;
+  padding: 4px 5px;
+
+}
+.dropmenu>ul>li:hover,.dropmenu>ul>li>a:hover {
+  color : white;
+  width:100%;
+  background-color: var(--blue);
+}
+/* cards */
+.cards {
+  width: 100%;
+  display: flex;
+  gap:8px;
+  margin-top: 10px;
+}
+.cards > .lhs {
+  width: 85%;
+ display: flex;
+ flex-direction: column;
+}
+.cards > .lhs > .cards {
+ gap: 6px;
+ justify-content: space-between;
+}
+.cards > .lhs > .cards > .itms {
+  width : 25%;
+  padding :10px 8px;
+  background-color: var(--liteblue);
+  border-radius: 0.6rem;
+}
+.cards > .lhs > .cards > .itms:first-child {
+background-color: var(--blue);
+color: white;
+}
+.cards > .lhs > .cards > .itms:first-child > .count p:nth-child(2) {
+
+color: var(--blue);
+}
+
+.cards > .lhs > .cards > .itms > .title, .cards > .rhs > .title , .cards > .lhs> .chartcard > .lhs > .title, .cards > .lhs> .chartcard > .rhs > .title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards > .lhs > .cards > .itms > .title > i, .cards > .rhs > .title >i,.cards > .lhs> .chartcard > .lhs > .title >i, .cards > .lhs> .chartcard > .rhs > .title>i{
+cursor: pointer;
+padding: 5px;
+}
+.cards > .lhs > .cards > .itms > .title > i:hover , .cards > .rhs > .title >i:hover ,.cards > .lhs> .chartcard > .lhs > .title >i:hover, .cards > .lhs> .chartcard > .rhs > .title>i:hover {
+  background-color: var(--blue);
+  color: white;
+  border-radius: 100%;
+  }
+.cards > .lhs > .cards > .itms > .title > h1 {
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.cards > .lhs > .cards > .itms > .count{
+  justify-content: space-between;
+} 
+.cards > .lhs > .cards > .itms > .count p:first-child{
+  font-size: 1.6rem;
+  font-weight: 600;
+} 
+.cards > .lhs > .cards > .itms > .count p:nth-child(2){
+display: flex;
+font-size: 11px;
+gap:5px;
+padding: 2px 5px;
+background-color: white;
+border-radius: 3px;
+} 
+.cards > .rhs{
+  width: 30%;
+  padding: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cards > .rhs > .counts{
+  flex-direction: column;
+  text-align: center;
+}
+.cards > .rhs > .counts > h1{
+  font-size: 2rem
+}
+.cards > .rhs > .counts > p{
+  color: var(--gray-dark);
+}
+.cards > .rhs > .counts > .btn{
+  width: 80%;
+  border-radius: 2rem;
+  margin: 7px 0;
+}
+.cards > .lhs> .chartcard {
+  justify-content: space-between;
+  margin-top: 12px;
+  display: flex;
+  height: 300px;
+}
+.cards > .lhs> .chartcard > .lhs {
+width: 47%;
+padding: 8px;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+height: 100%;
+}
+.cards > .lhs> .chartcard > .lhs >.xyc>img {
+  width: 80%;
+  object-fit: contain;
+}
+
+.cards > .lhs> .chartcard > .rhs {
+  width: 47%;
+  padding: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cards > .lhs> .chartcard > .rhs >.chartdetails{
+  display: flex;
+}
+.cards > .lhs> .chartcard > .rhs >.chartdetails>.charts{
+  display: flex;
+  flex-direction: column;
+}
+.cards > .lhs> .chartcard > .rhs >.chartdetails>.charts>h1{
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+.cards > .lhs> .chartcard > .rhs >.chartdetails>.listed{
+display: flex;
+flex-direction: column;
+gap: 10px;
+color: #343a40;
+}
+.tasksection{
+  width:100%;
+  margin-top: 10px;
+
+}
+.taskbard{
+  width : 50%;
+  padding: 8px;
+
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+}
+.taskbard > .title > i {
+  padding: 6px;
+  border-radius:5px ;
+  color: white;
+  background-color: #232BFF;
+  cursor: pointer;
+}
+.taskbard > .tasks{
+display: flex;
+flex-direction: column;
+gap:5px
+}
+.taskbard > .tasks > .taskitem  {
+  background-color: var(--liteblue);
+  padding:5px ;
+  border-radius: 6px;
+  margin-top: 10px;;
+}
+.taskbard > .tasks > .taskitem > .datesec{
+  display: flex;
+  justify-content: space-between;
+
+}
